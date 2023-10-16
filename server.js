@@ -18,12 +18,8 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 
 // cors middleware
-const corsOptions = {
-  origin: "http://18.159.36.20",
-  optionsSuccessStatus: 200,
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // router for all api calls
 app.use("/", apiRouter);
